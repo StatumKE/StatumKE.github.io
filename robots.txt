@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Keep this URL aligned with the canonical domain configured in index.html.
+Sitemap: https://statum.co.ke/sitemap.xml
