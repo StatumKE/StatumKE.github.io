@@ -110,7 +110,7 @@ h2 { margin-bottom: 26px; font-size: clamp(42px, 5vw, 68px); }
 .split-heading { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, .65fr); gap: 72px; align-items: end; }
 .split-heading > p { max-width: 450px; margin-bottom: 5px; color: var(--ink-soft); }
 .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.service-card { min-height: 335px; position: relative; padding: 30px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(255, 255, 255, .55); transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
+.service-card { min-height: 430px; display: flex; flex-direction: column; position: relative; padding: 30px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(255, 255, 255, .55); transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
 .service-card:hover { transform: translateY(-5px); background: var(--white); box-shadow: var(--shadow); }
 .service-card-featured { background: var(--night); color: var(--white); }
 .service-card-featured:hover { background: var(--night-2); }
@@ -118,8 +118,12 @@ h2 { margin-bottom: 26px; font-size: clamp(42px, 5vw, 68px); }
 .service-icon { display: grid; place-items: center; width: 54px; height: 54px; margin-bottom: 45px; border-radius: 16px; background: var(--mint); color: var(--green-dark); font-size: 25px; }
 .service-card-featured .service-icon { background: #1c3a35; color: #8bdeb0; }
 .service-card h3 { max-width: 240px; margin-bottom: 12px; font-size: 22px; letter-spacing: -.04em; }
-.service-card p { min-height: 78px; margin-bottom: 0; color: var(--ink-soft); font-size: 14px; }
+.service-card-summary { min-height: 0 !important; margin-bottom: 22px !important; color: var(--ink-soft); font-size: 14px; }
+.service-card-details { display: grid; gap: 13px; margin-top: auto; }
+.service-card-details p { min-height: 0 !important; margin: 0; color: var(--ink-soft); font-size: 13px; line-height: 1.45; }
+.service-card-details strong { display: block; margin-bottom: 3px; color: var(--green-dark); font-size: 10px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
 .service-card-featured p { color: #b8c3d0; }
+.service-card-featured .service-card-details strong { color: #8bdeb0; }
 .service-card-featured a { color: #8bdeb0; }
 
 .approach-section { background: var(--night); color: var(--white); }
@@ -162,6 +166,11 @@ h2 { margin-bottom: 26px; font-size: clamp(42px, 5vw, 68px); }
 .work-meta > span { color: var(--green-dark); font-size: 10px; font-weight: 900; letter-spacing: .18em; text-transform: uppercase; }
 .work-meta h3 { margin: 10px 0 12px; font-size: 24px; letter-spacing: -.04em; line-height: 1.08; }
 .work-meta p { min-height: 88px; margin-bottom: 0; color: var(--ink-soft); font-size: 14px; }
+.case-study-facts { display: grid; gap: 14px; margin: 23px 0 2px; padding-top: 20px; border-top: 1px solid var(--line); }
+.case-study-facts > div { display: grid; grid-template-columns: 68px 1fr; gap: 14px; align-items: start; }
+.case-study-facts > div > span { color: var(--green-dark); font-size: 10px; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+.case-study-facts p { min-height: 0; font-size: 13px; line-height: 1.48; }
+.work-meta .case-study-facts + a { margin-top: 25px; }
 
 .stack-section { background: var(--paper-2); }
 .stack-grid { display: grid; grid-template-columns: .75fr 1.25fr; gap: 110px; align-items: center; }
