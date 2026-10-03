@@ -85,6 +85,18 @@ h1 em, h2 em { color: var(--green); font-style: normal; }
 .service-ribbon { display: flex; justify-content: space-between; gap: 24px; padding: 28px 0 40px; color: #718093; font-size: 11px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
 .service-ribbon span::before { content: ""; display: inline-block; width: 7px; height: 7px; margin-right: 9px; border: 2px solid var(--green); border-radius: 50%; vertical-align: 1px; }
 
+.capability-section { background: var(--paper-2); }
+.capability-heading { margin-bottom: 48px; }
+.capability-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.capability-card { min-height: 274px; display: flex; flex-direction: column; padding: 28px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(255, 255, 255, .72); }
+.capability-index { margin-bottom: 58px; color: var(--green-dark); font-size: 11px; font-weight: 900; letter-spacing: .14em; }
+.capability-card h3 { max-width: 230px; margin-bottom: 12px; font-size: 21px; letter-spacing: -.04em; line-height: 1.08; }
+.capability-card p { margin-bottom: 0; color: var(--ink-soft); font-size: 14px; line-height: 1.55; }
+.capability-note { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 26px; align-items: center; margin-top: 24px; padding: 22px 26px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.capability-note > span { color: var(--green-dark); font-size: 10px; font-weight: 900; letter-spacing: .16em; text-transform: uppercase; }
+.capability-note p { max-width: 490px; margin: 0; color: var(--ink-soft); font-size: 14px; }
+.capability-note .text-link { margin-top: 0; white-space: nowrap; }
+
 .intro-section, .work-section { background: var(--white); }
 .intro-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1fr); gap: 100px; align-items: start; }
 h2 { margin-bottom: 26px; font-size: clamp(42px, 5vw, 68px); }
@@ -183,6 +195,7 @@ h2 { margin-bottom: 26px; font-size: clamp(42px, 5vw, 68px); }
 
 @media (max-width: 1000px) {
   .hero-grid, .approach-grid { gap: 48px; }
+  .capability-grid { grid-template-columns: repeat(2, 1fr); }
   .service-grid { grid-template-columns: repeat(2, 1fr); }
   .work-grid { grid-template-columns: 1fr 1fr; }
   .work-card-large { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; }
@@ -202,6 +215,8 @@ h2 { margin-bottom: 26px; font-size: clamp(42px, 5vw, 68px); }
   .hero-grid, .intro-grid, .split-heading, .approach-grid, .stack-grid, .contact-grid { grid-template-columns: 1fr; }
   .workflow-card { min-height: 510px; }
   .service-ribbon { flex-wrap: wrap; padding-top: 24px; }
+  .capability-note { grid-template-columns: 1fr; gap: 12px; }
+  .capability-note .text-link { width: fit-content; }
   .intro-copy { padding-top: 0; }
   .split-heading { gap: 0; }
   .split-heading > p { margin-top: -22px; }
@@ -220,7 +235,7 @@ h2 { margin-bottom: 26px; font-size: clamp(42px, 5vw, 68px); }
   .workflow-topline, .workflow-footer { padding-left: 20px; padding-right: 20px; }
   .workflow-step { grid-template-columns: 35px 1fr; gap: 11px; padding: 14px; }
   .workflow-step > span { width: 34px; height: 34px; }
-  .service-grid, .work-grid { grid-template-columns: 1fr; }
+  .capability-grid, .service-grid, .work-grid { grid-template-columns: 1fr; }
   .work-card-large { grid-column: auto; display: block; }
   .service-card { min-height: auto; }
   .service-card p, .work-meta p { min-height: 0; }
